@@ -14,7 +14,7 @@ namespace GreetingsConsole
         /// <summary>
         /// The base URL for the MessageService API
         /// </summary>
-        private const string MessageServiceUrl = "http://localhost:5000";
+        private const string MessageServiceUrl = "http://localhost:8080";
 
         /// <summary>
         /// Main entry point for the console application

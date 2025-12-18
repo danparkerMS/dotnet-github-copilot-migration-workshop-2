@@ -24,7 +24,12 @@ namespace MessageService
                 {
                     c.SingleApiVersion("v1", "MessageService API")
                         .Description("A simple REST API that returns greeting messages with timestamps");
-                    c.IncludeXmlComments(GetXmlCommentsPath());
+                    
+                    var xmlPath = GetXmlCommentsPath();
+                    if (System.IO.File.Exists(xmlPath))
+                    {
+                        c.IncludeXmlComments(xmlPath);
+                    }
                 })
                 .EnableSwaggerUi();
         }
